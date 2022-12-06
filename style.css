@@ -7,18 +7,37 @@ body{
     margin:1ref;
 }
 .container{
+    display: grid;
+    grid-template:  100px auto 100px / 100px 60fr 40fr;
+    grid-template-areas: "header  header header"
+                         "sideBar main   svg"
+                         "footer  footer footer";
     border: 2px solid green;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    height: 90vh;
+    height:100vh;
+    gap: 2vh 0.5vw 
+    
+    
+   
 
 }
-.box{
-    flex-basis:10rem;
-    height: 5rem;
-    width: 5rem;
-    margin:1rem;
+
+.box-row-one-column-one{
+    grid-area: header;
     background:gold;
+}
+.box-row-one-column-two{
+    grid-area:svg;
+    background:purple;
+}
+.box-row-two-column-one{
+    grid-area:sideBar;
+    background:yellow;
+}
+.box-row-two-column-two{
+    grid-area:main;
+    background:green;
+}
+.box-row-three-column-two{
+    grid-area:footer;
+    background:brown;
 }
